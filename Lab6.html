@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lab 6</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script>
+        function validate() {
+        var inputPhone = document.getElementById("phonenum").value;
+        var phonenumber = /^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$/;
+        var inputName = document.getElementById("name").value;
+        var inputAddress = document.getElementById("address").value;
+        var name = /^[A-Za-z ]+$/;
+        if(!inputPhone.match(phonenumber)) {
+                        alert("That is not the correct format for the phone number. Try again.");
+                        return false;
+        }
+        if(!inputName.match(name)) {
+                alert("Please only put letters in your name.");
+                return false;}
+        else {return true;}
+}
+</script>
+</head>
+        <h1>Sarah Ferrolino</h1>
+        <br>
+        <h1>500768674</h1>
+<body>
+        <form method="post" action="http://www2.scs.ryerson.ca/~sferroli/cgi-bin/Lab6Ruby.rb" onsubmit="return validate()">
+                Full Name:<br>
+                <input type="text" name="name" id="name" value="">
+                <br>
+                Address:<br>
+                <input type="text" name="address" id="address" value="">
+                <br>
+                Phone Number:(Please use the format: 123-123-1234) <br>
+                <input type="text" name="phonenum" id="phonenum" value="">
+                <br><br>
+                <input type="submit" name="submit" value="Submit">
+        </form>
+</body>
+</html>

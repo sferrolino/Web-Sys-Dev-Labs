@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+</head>
+
+<link href="mystyle.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+<div class="topnav">
+  <a href="#summary">Summary</a>
+  <a href="#installation">Installation</a>
+  <a href="#how_to_guide">How to Guide</a>
+  <a href="#demo">Demo</a>
+  <a href="#conclusion">Conclusion</a>
+  <a href="#team">Team</a>
+</div>
+
+<br>
+
+<img src="http://cdn.shopify.com/s/files/1/0014/1962/files/FG-banner_collecthead_stardewvalley_00c97244-606b-44b6-b440-e8d84567d340.png?v=1475715249" 
+style="width: 100%; display: block; margin-left: auto; margin-right: auto; object-fit:cover">
+
+<h1 align="center">Beginner Guide: Tips & Tricks</h1>
+<h2 class="yellowheaders">Tips</h2>
+<!-- VueJS List -->
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo }}
+    </li>
+  </ol>
+</div>
+
+<script>
+var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [ 'Watch TV every morning', 'Morning to get luck rating & tomorrows forecast',
+		'Night get tomorrows forecast', 'Open geodes when youre most luckiest',
+'The spirits are very happy today! They will do their best to shower everyone with good fortune',
+'Never open geodes when the spirits are displeased', 'Look out for worms - Worms in the dirt means there is an item there',
+'Buy crops and plant them ASAP',
+'Plan your crops out so that nothing is left after the 30th because they will go bad!',
+'Stock up on wood','Go to bed by midnight to get full energy',
+'Unlock sauna for free energy refresh but it cost time',
+'Build Silo before cutting grass',
+'Talk to Villagers Everyday', 'Plant Cauliflower, Pumpkin and Melon in a 3 x 3 square or higher to get a giant crop',
+'Each Fish comes at a Time of Day And Season',
+'Each Body of Water has Different Fish']
+  }
+});
+</script>
+
+<br><br>
+<h3 align="center">Most Cost Effective Crop per Season</h3>
+<!-- VueJS Table -->
+<table id="firstTable" class="color" align=center border=3px cellpadding=10px>
+		  <thead>
+		    <tr>
+		      <th>Spring</th>
+		      <th>Summer</th>
+		      <th>Fall</th>
+		      <th>Winter</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr v-for="row in rows">
+		      <td>{{row.season}}</td>
+		      <td>{{row.crops}}</td>
+			  <td>{{row.crops1}}</td>
+			  <td>{{row.crops2}}</td>
+		    </tr>
+		  </tbody>
+		</table>
+
+		<script>
+				var firstTable = new Vue({
+		  			el: '#firstTable',
+		  			data: {
+		    			rows: [
+					      { season: "Coffee Beans (after 3 regrowth)", crops: "Starfruit",crops1: "Cranberries",crops2: "Crystal Fruit (But the crops are random so hope for this one)" },
+						  { season: "Cauliflower", crops: "Blueberries",crops1: "Grapes",crops2: "Specialty" },
+		    			  { season: "", crops: "",crops1: "",crops2: "Sweet Gem Berry" },
+						  { season: " ", crops: " ",crops1: " ",crops2: "Ancient Seeds" }
+						]
+		  			}
+				});
+		</script>
+
+<br>
+<br>
+<h3 align=center> Crop Harvest Time </h3>
+
+<table border=3px cellpadding=10px align=center>
+<tr>
+    <th colspan= "2"> Spring Crops </th>
+	<th colspan= "2"> Summer Crops </th>
+	<th colspan= "2"> Fall Crops </th>
+	<th colspan= "2"> Winter Crops </th>
+  </tr>
+
+  <tr>
+    <th>Crop</th>
+    <th>Number of Days</th>
+	<th>Crop</th>
+    <th>Number of Days</th>
+	<th>Crop</th>
+    <th>Number of Days</th>
+	<th>Crop</th>
+    <th>Number of Days</th>
+  </tr>
+  <tr>
+    <td>Blue Jazz</td>
+    <td>7</td>
+	<td>Blueberry</td>
+    <td>7</td>
+	<td>Amarnath</td>
+    <td>7</td>
+	<td>Winter Seeds </td>
+    <td>7</td>
+  </tr>
+<tr>
+    <td>Cauliflower</td>
+    <td>12</td>
+	<td>Corn</td>
+    <td>13+4</td>
+	<td>Artichoke</td>
+    <td>8</td><td></td>
+	<td></td>
+  </tr>
+<tr>
+    <td>Coffee Bean</td>
+    <td>10+2</td>
+	<td> Hops</td>
+    <td>14+4</td>
+	<td> Beet</td>
+    <td>6</td><td></td>
+	<td></td>
+  </tr>
+<tr>
+    <td>Garlic</td>
+    <td>4</td>
+	<td>Hot Pepper</td>
+    <td>5+3</td>
+	<td>Bok Choy</td>
+    <td>4</td><td></td>
+	<td></td>
+  </tr>
+<tr>
+    <td>Green Bean</td>
+    <td>10+3</td>
+	<td>Melon</td>
+    <td>12</td>
+	<td>Cranberries</td>
+    <td>7+5</td><td></td>
+	<td></td>
+  </tr>
+<tr>
+    <td>Kale</td>
+    <td>6</td>
+	<td>Poppy</td>
+    <td>7</td>
+	<td>Eggplant</td>
+    <td>5+5</td><td></td>
+	<td></td>
+  </tr>
+<tr>
+    <td>Parsnip</td>
+    <td>4</td>
+	<td>Radish</td>
+    <td>6</td>
+	<td>Fairy Rose</td>
+    <td>12</td><td></td><td></td>
+  </tr>
+<tr>
+    <td>Potato</td>
+    <td>6</td>
+	<td>Red Cabbage</td>
+    <td>9</td>
+	<td>Grape</td>
+    <td>10+3</td><td></td><td></td>
+  </tr>
+<tr>
+    <td>Rhubarb</td>
+    <td>13</td>
+	<td>Starfruit</td>
+    <td>13</td>
+	<td>Pumpkin</td>
+    <td>13</td><td></td><td></td>
+  </tr>
+<tr>
+    <td>Starwberry</td>
+    <td>8+4</td>
+	<td>Summer Spangle</td>
+    <td>8</td>
+	<td>Yam</td>
+    <td>10</td><td></td><td></td>
+  </tr>
+ <tr>
+    <td>Tulip</td>
+    <td>6</td>
+	<td>Sunflower</td>
+    <td>8</td>
+	<td>Ancient Seeds</td>
+    <td>28+7</td><td></td><td></td>
+  </tr>
+   <tr>
+    <td></td>
+	<td></td>
+    <td>Tomato</td>
+    <td>11+4</td>
+	<td>Cactus</td>
+    <td>12+3</td><td></td><td></td>
+  </tr>
+   <tr>
+   <td></td>
+   <td></td>
+    <td>Wheat</td>
+    <td>4</td>
+	<td> Mixed Seeds </td>
+    <td>4 to 12 </td><td></td><td></td>
+  </tr>
+  <tr>
+	<td></td><td></td><td></td><td></td>
+    <td>Sweet Gem Berry</td>
+    <td>24</td><td></td><td></td>
+  </tr>
+</table>
+
+<br><br>
+
+<h1 class="yellowheaders">In-game Screenshots</h1>
+<h2 class="yellowheaders">The Farm</h2>
+<img src="https://upload.farm/static/images/7/1Ifp7Y/1Ifp7Y-m.png" alt="Ginger`s Farm" style="width:100%"/>
+<br><br>
+<h2 class="yellowheaders">Items Guide</h2>
+<img src="https://stardewvalleywiki.com/mediawiki/images/thumb/8/8a/The_Ultimate_Fishing_Infograph.png/1200px-The_Ultimate_Fishing_Infograph.png" alt="Fish Info" style="width:100%"/>
+
+<br><br>
+<h1 class="yellowheaders">Tricks</h1>
+
+<h2 class="yellowheaders">Trick #1: Use Mods </h2>
+<iframe style="display:block; align: center; margin:auto;" width="560" height="315" src="https://www.youtube.com/embed/aoG8ipkRwwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+<br><br>
+
+<h2 class="yellowheaders">Trick #2: Speed Run Joja Membership Achievement </h2>
+<div id="app-3">
+  <ol>
+    <li v-for="todo in tricks">
+      {{ todo }}
+    </li>
+  </ol>
+</div>
+
+<script>
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    tricks: ['Name yourself', 'Talk to Gus many times','Sell all the items you get from him','Next Day go to Joja mart and buy every unlockable',
+'Day 3 go to the community center to get the achievement']
+  }  
+});
+</script>
+
+<h2 class="yellowheaders">Trick #3: Money Glitch</h2>
+<iframe style="display:block; align: center; margin:auto;" width="560" height="315" src="https://www.youtube.com/embed/i5dZh6MSxf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br><br>
+<h2 class="yellowheaders">Trick #4: Transfer your farm from desktop to your phone </h2>
+<div id="app-5">
+  <ol>
+    <li v-for="todo in tricks">
+      {{ todo }}
+    </li>
+  </ol>
+</div>
+
+<script>
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    tricks: ['Find your save file using: %AppData%\StardewValley\Saves (on windows) or ~/.config/StardewValley/Saves (on mac)',
+'Plug in your phone into your computer and locate your Stardew Valley folder on your device',
+'copy and paste your save file into your folder that is on your phone phone',
+'Open stardew Valley']
+  }  
+});
+</script>
+
+</div>
+<br><br>
+
+
+
+
+
+
+</body>
+</html>

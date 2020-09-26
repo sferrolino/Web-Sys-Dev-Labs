@@ -1,0 +1,70 @@
+<!DOCTYPE html, java script and jquery>                                                                                 <html lang="en">
+
+<head>
+<title> CPS530 Lab 7 </title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"> </script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"> </script>
+
+<script>
+
+<!-- THIS IS A JQUERY CODE SNIPPET FOR THE DRAG AND DROP FUNCTION -->
+var index=1;
+
+$(function()
+{
+        <!-- DRAG FUNCTION -->
+        $('img' ).draggable();                                                                                                  $('img').mousedown(function()                                                                                           {                                                                                                                               index+=1;                                                                                                               $(this).css("z-index", index);
+        })                                                                                                              
+        <!-- MAKES SURE NONE OF THE PARTS IMAGES GO UNDERNEATH THE BODY IMAGE -->
+        $('img').click(function()                                                                                               {                                                                                                                               index=0;                                                                                                                $(this).css("z-index", index);
+        })
+
+});
+
+</script>                                                                                                               </head>
+
+<body>
+
+<h1 align="center"> LAB 7 </h1>
+<h1 align="center"> SARAH FERROLINO (500768674) </h1>
+
+<h2 align="center"> Make your own Mr. Potato Head! </h2>
+
+<br>
+<br>
+<br>
+                                                                                                                        <div class="centerAll">                                                                                                 
+<img src="http://christopherrosario.github.io/Mr_Potato_Head/assets/body.png" width="350" height=auto>
+<br>
+<br>
+
+<h2> Customize it yourself! </h2>
+
+<!-- IMAGES FOR THE EYES -->
+<h3> EYES: </h3>
+<img src="http://clipart-library.com/img/825515.png" width="150" height=auto>
+<img src="http://clipart-library.com/img/825537.png" width="180" height=auto>
+
+<!-- IMAGES FOR THE NOSE -->
+
+<h3> NOSES: </h3>                                                                                                       <img src="http://pngimg.com/uploads/nose/nose_PNG16.png" width=auto height="200">
+<img src="https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bed5.png" width=auto height="130">
+<img src="https://www.freepngimg.com/thumb/nose/32756-9-nose-transparent-background.png" width="150" height=auto>
+
+<h3> MOUTH: </h3>
+<!-- IMAGES FOR THE MOUTH -->
+<img src="https://imgur.com/FWK2zYT.png" width="150" height=auto>
+<img src="https://i.imgur.com/dYnJzAo.png" width="180" height=auto>
+<img src="https://i.imgur.com/caMx0Mc.png" width="180" height=auto>
+
+<h3> HATS: </h3>
+<!-- IMAGES FOR THE HAT -->
+<img src="https://i.imgur.com/tU7iAoC.png" width="300" height=auto>                                                     <img src="http://res.freestockphotos.biz/pictures/15/15578-illustration-of-a-brown-cartoon-hat-pv.png" width="300" height="200">
+<img src="https://i.imgur.com/EB5N2sp.png" width="200" height=auto>
+
+<br>
+<br>
+
+</body>
+</html>
